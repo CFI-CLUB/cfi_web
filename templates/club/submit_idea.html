@@ -1,0 +1,94 @@
+{% extends 'club/base.html' %}
+{% load staticfiles %}
+
+{% block title %} Submit Idea {% endblock %}
+
+{% block body_block %}
+
+<!-- =========================
+     PRE LOADER
+============================== -->
+<div class="preloader">
+  <div id="ip-container" class="ip-container">
+    <div class="ip-header">
+        <div class="ip-loader">
+            <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            </svg>
+        </div>
+    </div>
+</div>
+</div>
+
+<header class="header" id="blog">
+<!-- STICKY NAVIGATION -->
+    <div id="blog-nav" class="navbar bs-docs-nav navbar-fixed-top nav-transparent sticky-navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- LOGO ON STICKY NAV BAR -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+
+              <a class="navbar-brand" href="{% url 'cfi:index' %}">
+
+                <img class="mr-1" src="{% static 'images/club/cfi.svg' %}">
+                <div class="logo-title">CFI JGEC</div></a>
+
+            </div>
+        <!-- NAVIGATION LINKS -->
+        <div class="navbar-collapse collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right main-navigation">
+                <li><a href="{% url 'club:index' %}#home">home</a></li>
+                <li><a href="{% url 'club:index' %}#services">Motto</a></li>
+                <li><a href="{% url 'club:index' %}#about">about</a></li>
+                <li><a href="{% url 'club:index' %}#sristi">sristi</a></li>
+                <li><a href="{% url 'club:index' %}#portfolio">projects</a></li>
+                <li><a href="{% url 'club:index' %}#team">team</a></li>
+                <li><a href="#blog">Ideas</a></li>
+                <li><a href="{% url 'club:index' %}#contact">contact</a></li>
+            </ul>
+        </div> <!--END NAVIGATION LINKS -->
+    </div> <!-- /END CONTAINER -->
+</div> <!-- /END STICKY NAVIGATION -->
+
+
+<!--page title start-->
+<section class="blog-list-title" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <a href="{% url 'club:index' %}">
+                        <h2 style="font-size:30px;" class="blog-page-heading"><span style="font-weight:600;">CFI</span> JGEC</h2>
+                    </a>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'club:index' %}">Home</a></li>
+                    <li class="active"><a href="#">Submit Idea</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!--page title end-->
+</header>
+
+        <div>
+            <form method="post"
+                  action="{% url 'club:submit_ideas' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+
+
+{% endblock %}
+
+{% block year %} {{ year }} {% endblock %}

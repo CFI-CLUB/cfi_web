@@ -1,0 +1,288 @@
+ <!-- 
+
+    Author: Gurtej Singh Rehal
+    Batch: 2020
+    Department: IT
+    github: https://github.com/gurtejrehal
+
+ -->
+
+<!DOCTYPE html>
+ {% load staticfiles %}
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>CFI JGEC</title>
+    
+    <meta name="author" content="gurtejrehal">
+    
+    <!-- Mobile meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/club/cfi.png' %}">
+    
+    <!-- Start Header styles -->
+    <link rel="stylesheet" href="{% static 'css/cfi/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cfi/jquery.fullPage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cfi/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cfi/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cfi/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cfi/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cfi/style.css' %}">
+    <!-- End Header styles-->
+    
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
+    
+    <!-- Favion -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/cfi/cfi.png' %}">
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="{% static 'images/cfi/cfi.png' %}">
+    
+  </head>
+  <body class='video-youtube-list' id="style-3">
+    <!-- Start Loader -->
+    <div class='loading'>
+      <div class='loader'>
+        <img class='loader-img' src="{% static 'images/cfi/loader.svg' %}">
+        <span>
+          Loading...
+        </span>
+      </div>
+    </div>
+    <!-- End Loader -->
+    
+    <!-- Start Header -->
+    <header class='page-header' id='page-header'>
+      <div class='container-full'>
+        <div class='navbar-header'>
+          <!-- Logo -->
+          <a class='logo animated onstart' data-animation-delay='200' data-animation='fadeInDown' href="{% url 'cfi:index' %}">
+            <span class='logo-letter'>CFI</span>
+            JGEC
+          </a>
+        </div>
+        
+        <div class='nvabar-right'>
+          <a class='btn btn-rounded btn-gradient-primary'  href="{% url 'club:index' %}" data-placement='bottom' data-toggle='tooltip' title="CFI JGEC Club">
+            Take me to the Club 
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Sidebar navigation -->
+   <!--  <nav class='sidebar-nav sidebar-rounded' id='sidebar-nav'>
+      <ul>
+        <li>
+          <a href='#welcome'>
+            <span class='nav-dot'></span>
+            <span class='nav-label'>
+              Home
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href='#about'>
+            <span class='nav-dot'></span>
+            <span class='nav-label'>
+              About Us
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav> -->
+    <!-- End Sidebar navigation -->
+    
+    <!-- Video Youtube List -->
+    <div class='video-player'></div>
+    
+    <div class='page-wrap' id='fullpage'>
+      
+      <!-- Start Welcome -->
+      <section class='welcome section-content section'>
+        <div class='overlay light'></div>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-sm-12'>
+              <h1 class='section-title animated onstart' data-animation-delay='0' data-animation='fadeInUp' style="text-transform: uppercase;font-size: 45px;">
+                Center for Innovation Club, JGEC
+              </h1>
+              <!-- <div class='onstart animated text-left' data-animation-delay='100' data-animation='fadeInUp' id='clock'></div> -->
+              <!-- <div class='mg-t'>
+                <a class='btn btn-outline btn-lg js-to-slide animated onstart' data-animation-delay='400' data-animation='fadeInUp' data-slide='2' href='#'>
+                  
+                  <i class='fa fa-angle-down'></i>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Welcome -->
+      
+      <!-- Start About -->
+      <section class='about section'>
+        <div class='overlay light'></div>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-sm-12'>
+              <div class='hero-content'>
+                <h1 class='section-title text-left animated' data-animation-delay='0' data-animation='fadeInUp'>
+                  About us
+                </h1>
+              </div>
+              <div class='row'>
+                <div class='col-12 col-sm-6'>
+                  <div class='mg-b'>
+                    <p class='animated' data-animation-delay='100' data-animation='fadeInUp'>
+                     CFI is the technical society of JGEC. It has been promoting technical knowledge of the students since its establishment (2010). Along with conduction of classes, CFI also deals with projects and provides adequate support to carry out the same. In short, CFI is an organisation where students come-in together to uplift their technical know-how - for the betterment of themselves and for the society.
+                    </p>
+                  </div>
+                  <a class='btn btn-outline btn-lg js-link-video animated' data-placement='top' data-toggle='tooltip' data-animation-delay='200' data-animation='fadeInUp' href='https://www.youtube.com/watch?v=C-N8JAAyKAY&t=16s'  title="Recent Tech Fest Video">
+                    Watch Video
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                  </a>
+                  <button class='btn btn-outline btn-lg js-gallery-link animated' data-animation-delay='200' data-animation='fadeInUp' data-slide='4' type='button'>
+                    Gallery
+                    <i class="fa fa-photo" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About -->
+
+      
+
+      
+    </div>
+    <!-- Start Gallery -->
+    <div class='js-gallery'>
+      <!-- Gallery -->
+      <div class='gallery-slide' id='gallery'>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-1.jpg' %}" title='Title for picture #1'></a>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-2.jpg' %}" title='Title for picture #2'></a>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-3.jpg' %}" title='Title for picture #3'></a>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-4.jpg' %}" title='Title for picture #4'></a>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-5.jpg' %}" title='Title for picture #5'></a>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-6.jpg' %}" title='Title for picture #6'></a>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-7.jpg' %}" title='Title for picture #7'></a>
+        <a class='gallery-item' href="{% static 'images/cfi/backgrounds/bg-8.jpg' %}" title='Title for picture #8'></a>
+      </div>
+      <!-- End Gallery -->
+    </div>
+    <!-- End Gallery -->
+    
+    <!-- Start Footer -->
+    <footer class='page-footer'>
+      <div class='container-full'>
+        <div class='row'>
+          <div class='col-sm-5'>
+            <!-- Social navigation -->
+            <div class='social-nav'>
+              <ul>
+                <li class='animated onstart' data-animation-delay='600' data-animation='fadeInUp' href='#'>
+                  <a data-placement='top' data-toggle='tooltip' href='https://www.facebook.com/CFI.JGEC/' title='Follow us on Facebook'>
+                    <i class='fa fa-facebook'></i>
+                  </a>
+                </li>
+                <!-- <li class='animated onstart' data-animation-delay='700' data-animation='fadeInUp' href='#'>
+                  <a data-placement='top' data-toggle='tooltip' href='#' title='Follow us on Twitter'>
+                    <i class='fa fa-twitter'></i>
+                  </a>
+                </li>
+                <li class='animated onstart' data-animation-delay='800' data-animation='fadeInUp' href='#'>
+                  <a data-placement='top' data-toggle='tooltip' href='#' title='Follow us on Instagram'>
+                    <i class='fa fa-instagram'></i>
+                  </a>
+                </li> -->
+                <li class='animated onstart' data-animation-delay='800' data-animation='fadeInUp' href='#'>
+                  <a data-placement='top' data-toggle='tooltip' href='mailto:cfi@jgec.ac.in' title='Mail us'>
+                    <i class='fa fa-paper-plane'></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Social navigation -->
+            
+            <div class='copyright-wrapper'>
+              <div class='copyright animated onstart' data-animation-delay='1200' data-animation='fadeInUp' href='#'>
+                © Made with <i class="fa fa-heart highlight" aria-hidden="true"></i> by 
+                <a data-placement='top' data-toggle='tooltip' href='https://github.com/gurtejrehal' target='_blank' title='GitHUB account'>Gurtej Singh Rehal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    
+    <!-- Start Subscribe -->
+    <div class='mfp-hide white-popup small-popup bg-image-1 border-radius-mid' id='subscribe-form'>
+      <div class='overlay'></div>
+      <div class='content'>
+        <h1 class='section-title'>
+          Subscribe
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias numquam sint aliquam rem, quis beatae, dolorum totam provident laboriosam
+        </p>
+        <form action='#' class='mailchimp-form subscribe-form-wrap'>
+          <div class='input-group input-group-roundend'>
+            <input class='form-control' name='email' placeholder='Your email' type='email'>
+            <div class='input-group-btn'>
+              <button class='btn btn-outline btn-inverse' type='submit'>
+                Send
+                <i class='fa fa-angle-right'></i>
+              </button>
+            </div>
+          </div>
+          <p class='error-message'></p>
+          <p class='success-message'></p>
+        </form>
+      </div>
+    </div>
+    <!-- End Subscribe -->
+    
+    <!-- Start Scripts -->
+    <script src="{% static 'js/cfi/jquery-3.4.0.min.js' %}"></script>
+    
+    <script src="{% static 'js/cfi/jquery.easing.1.3.js' %}"></script>
+    
+    <!-- Bootsrap plugins -->
+    <script src="{% static 'js/cfi/bootstrap.bundle.js' %}"></script>
+    
+    <!-- Countdown -->
+    <script src="{% static 'js/cfi/jquery.countdown.js' %}"></script>
+    
+    <!-- OwlCarousel -->
+    <script src="{% static 'js/cfi/owl.carousel.min.js' %}"></script>
+    
+    <!-- Youtube player -->
+    <script src="{% static 'js/cfi/jquery.mb.YTPlayer.js' %}"></script>
+    
+    <!-- Others -->
+    <script src="{% static 'js/cfi/jquery.fullPage.min.js' %}"></script>
+    <script src="{% static 'js/cfi/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/cfi/jquery.fitvids.js' %}"></script>
+    <script src="{% static 'js/cfi/jquery.backstretch.min.js' %}"></script>
+    
+    <!-- Mailchimp -->
+    <script src="{% static 'js/cfi/jquery.ajaxchimp.js' %}"></script>
+    
+    <!-- Moment -->
+    <script src="{% static 'js/cfi/moment.js' %}"></script>
+    <!-- Magnific popup -->
+    <script src="{% static 'js/cfi/jquery.magnific-popup.min.js' %}"></script>
+    
+    <!-- Main -->
+    <script src="{% static 'js/cfi/main.js' %}"></script>
+    <!-- End Scripts -->
+  </body>
+
+</html>

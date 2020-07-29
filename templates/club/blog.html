@@ -1,0 +1,110 @@
+{% extends 'club/base.html' %}
+{% load staticfiles %}
+
+{% block title %} {{ blog.title }} {% endblock %}
+
+{% block body_block %}
+
+<!-- =========================
+     PRE LOADER       
+============================== -->
+<div class="preloader">
+<div id="ip-container" class="ip-container">
+    <div class="ip-header">
+        <div class="ip-loader">
+            <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            </svg>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+
+                    <!--page title start-->
+    <section class="blog-list-title" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <a href="{% url 'club:index' %}">
+                        <h2 style="font-size:30px;" class="blog-page-heading"><span style="font-weight:600;">CFI</span> JGEC</h2>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ol class="breadcrumb text-right">
+                        <li><a href="{% url 'club:index' %}">Home</a></li>
+                        <li><a href="{% url 'club:blog_list' %}">Ideas</a></li>
+                        <li class="active">{{ blog.title }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--page title end-->
+
+     <!-- SINGLE BLOG -->
+     <div class="single-post container">
+
+        <!-- section -->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Post -->
+                        <section class="blog-post">
+                            <!-- Post Media -->
+                            <div class="blog-page-media">
+                                {% if blog.picture %}
+                                    <img class="blog-image" src="{{ blog.picture.url }}" alt="">
+                                  {% else %}
+                                    <img src="{% static 'images/dp.jpg' %}">
+                                  {% endif %}
+                            </div>
+                            <!-- Post Title -->
+                            <h4 class="blog-page-post-title">{{ blog.title }}</h4>
+
+                            <!-- Date, Author, Categories, Comments -->
+                            <div class="blog-item-detail">
+                                <a href="#"><i class="icon-pencil"></i> {{ blog.author }}</a>
+                                <a href="#"><i class="icon_folder-alt"></i> {{ blog.department }}, {{ blog.pass_year }}</a>
+                                <a href="#"><i class=" icon-chat"></i> {{ blog.views }} views</a>
+                            </div>
+                            <!-- Post body text -->
+                            <div class="blog-item-body">
+                                <p>
+                                    {{ blog.content }}
+                                </p>
+
+                            </div>
+                            <!--/ End Post body text -->
+                            <div class="tags">
+                                <a href="#">{{ blog.category }}</a>
+                                <a href="#">Innovation</a>
+                            </div>
+                        </section>
+                        <!--/ End Post -->
+
+
+
+                        <div id="end-content"></div>
+                    </div>
+                    <!--/ End col -->
+                         
+
+                    <!-- SIDE BAR -->
+                    <!--/ End col -->
+                </div>
+                <!--/ End row -->
+            </div>
+            <!--/ End container -->
+        </div>
+        <!--/ End section -->
+        
+    </div>  
+
+
+{% endblock %}
+
+{% block year %} {{ year }} {% endblock %}

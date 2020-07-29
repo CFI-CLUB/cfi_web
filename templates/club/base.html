@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+ {% load staticfiles %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="gurtej rehal">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- SITE TITLE -->
+	<title>
+      CFI JGEC - {% block title %}Home{% endblock %}
+    </title>
+
+<!-- =========================
+    FAV AND TOUCH ICONS (RETINA)
+    ============================== -->
+    <link rel="icon" href="{% static 'images/club/cfi.png' %}">
+
+
+<!-- =========================
+     STYLESHEETS
+     ============================== -->
+     <!-- BOOTSTRAP -->
+     <link rel="stylesheet" href="{% static 'css/club/bootstrap.min.css' %}">
+
+     <!-- FONT ICONS -->
+     <link rel="stylesheet" href="{% static 'assets/elegant-icons/style.css' %}">
+     <link rel="stylesheet" href="{% static 'assets/et-line-font/style.css' %}">
+     <link rel="stylesheet" type="text/css" href="{% static 'css/club/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/club/ionicons.min.css' %}">
+     <!-- <link rel="stylesheet" href="assets/app-icons/styles.css"> -->
+     <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
+
+     <!-- GOOGLE FONTS -->
+     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,600,700' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Advent+Pro:400,700' rel='stylesheet' type='text/css'>
+
+
+     <!-- CAROUSEL AND LIGHTBOX -->
+     <link rel="stylesheet" href="{% static 'css/club/owl.theme.css' %}">
+     <link rel="stylesheet" href="{% static 'css/club/owl.carousel.css' %}">
+     <link rel="stylesheet" href="{% static 'css/club/nivo-lightbox.css' %}">
+     <link rel="stylesheet" href="{% static 'css/club/nivo_themes/default/default.css' %}">
+
+     <!-- ANIMATIONS -->
+     <link rel="stylesheet" href="{% static 'css/club/animate.min.css' %}">
+
+
+
+     <!-- MAIN STYLESHEETS -->
+     <link rel="stylesheet" href="{% static 'css/club/styles.css' %}">
+
+     <!-- COLORS -->
+     <link rel="stylesheet" href="{% static 'css/club/color-schemes/sky-blue.css' %}">
+
+
+     <!-- RESPONSIVE FIXES -->
+     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+
+<!--[if lt IE 9]>
+			<script src="{% static 'js/club/club/html5shiv.js' %}"></script>
+			<script src="{% static 'js/club/respond.min.js' %}"></script>
+			<![endif]-->
+
+		</head>
+
+		<body id="style-4">
+
+
+        {% block body_block %}{% endblock %}
+
+
+<!-- =========================
+     FOOTER
+     ============================== -->
+
+     <footer class="footer-section">
+
+     	<div class="row footer-content">
+     		<div class="col-md-4 footer-column">
+     			<h4 class="footer-title">Subscribe now!</h4>
+     			<form data-mailchimp="true" class="inline-form" id="subscriber-form">
+     				<div class="input-group">
+     					<input type="email" name="email" class="subscriber form-control required email valid" placeholder="Your Email"><span class="input-group-btn"><button id="widget-subscribe-submit-button" type="submit" data-loading-text="Loading..." class="btn btn-home hvr-bounce-to-right-white">Subscribe</button></span>
+     				</div>
+     			</form>
+     			<!-- COPYRIGHT TEXT -->
+     			<div class="copyright">
+     				©{% block year %}{% endblock %} CFI JGEC, All Rights Reserved
+     				<br>
+     				<p class="creo">made with <i class=" icon_heart "></i> by Gurtej.</p>
+     			</div>
+     		</div>
+     		<div class="col-md-4 footer-column">
+     			<!-- footer logo -->
+     			<div class="footer-logo">
+     				<a href="{% url 'cfi:index' %}"><img width="120px" height="120px" style="filter:  brightness(0) invert(1);" src="{% static 'images/club/cfi.svg' %}" alt="CFI Logo" /></a>
+     				<p><span style="font-size: 50px;">CFI</span> JGEC</p>
+     			</div>
+     			<!--/ End footer logo -->
+     			<ul class="social-icons">
+     				<li><a href="https://www.facebook.com/CFI.JGEC/"><i class="social_facebook"></i></a></li>
+     				<li><a href="#"><i class="social_twitter"></i></a></li>
+     			</ul>
+     			<ul class="list-inline">
+     				<li>
+     					<a href="#services">Motto</a>
+     				</li>
+
+     				<li>
+     					<a href="#about">About</a>
+     				</li>
+
+     				<li>
+     					<a href="#blog">Ideas</a>
+     				</li>
+
+     				<li>
+     					<a href="#contact">Contact</a>
+     				</li>
+     			</ul>
+     		</div>
+     		<div class="col-md-4 footer-column">
+     			<div class="widget clearfix widget-tweeter">
+     				<h4 class="footer-title">Other Information</h4>
+     				<ul class="list-tweets list-medium">
+     					<li><a href="https://www.jgec.ac.in/">JGEC WEBSITE</a>
+
+     					</li>
+     					<li>
+     						<a href="http://jgecalumni.org/">JGEC ALUMNUS WEBSITE</a>
+     					</li>
+     				</ul>
+     			</div>
+     		</div>
+     	</div>
+
+
+     	<!-- SCROLL UP -->
+     	<div class="scroll-up">
+     		<a class="theme-color-bg" href="#home"><i class="fa fa-angle-up"></i></a>
+     	</div>
+
+
+
+     </footer>
+     <!-- /END FOOTER -->
+
+<!-- =========================
+     SCRIPTS
+     ============================== -->
+     <script src="{% static 'js/club/jquery.min.js' %}"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script src="{% static 'js/club/modernizr.custom.js' %}"></script>
+     <script src="{% static 'js/club/bootstrap.min.js' %}"></script>
+     <script src="{% static 'js/club/smoothscroll.js' %}"></script>
+     <script src="{% static 'js/club/jquery.scrollTo.min.js' %}"></script>
+     <script src="{% static 'js/club/jquery.localScroll.min.js' %}"></script>
+     <script src="{% static 'js/club/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'js/club/isotope.pkgd.min.js' %}"></script>
+     <script src="{% static 'js/club/waypoints.min.js' %}"></script>
+     <script src="{% static 'js/club/wow.min.js' %}"></script>
+     <script src="{% static 'js/club/parallax.min.js' %}"></script>
+     <script src="{% static 'js/club/retina.min.js' %}"></script>
+     <script src="{% static 'js/club/jquery.nav.js' %}"></script>
+     <script src="{% static 'js/club/matchMedia.js' %}"></script>
+     <script src="{% static 'js/club/jquery.fitvids.js' %}"></script>
+     <script src="{% static 'js/club/jquery.countTo.js' %}"></script>
+     <script src="{% static 'js/club/nivo-lightbox.min.js' %}"></script>
+     <script src="{% static 'js/club/classie.js' %}"></script>
+     <script src="{% static 'js/club/jquery.ajaxchimp.js' %}"></script>
+     <script src="{% static 'js/club/pathLoader.js' %}"></script>
+     <script src="{% static 'js/club/particles.js' %}"></script>
+     <script src="{% static 'js/club/app1.js' %}"></script>
+     <script src="{% static 'js/club/custom.js' %}"></script>
+
+ </body>
+
+</html>

@@ -1,0 +1,851 @@
+{% extends 'club/base.html' %}
+{% load staticfiles %}
+
+{% block body_block %}
+<!-- =========================
+     PRE LOADER       
+     ============================== -->
+     <div class="preloader">
+     	<div id="ip-container" class="ip-container">
+     		<div class="ip-header">
+     			<div class="ip-loader">
+     				<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+     					<path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+     					<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+     				</svg>
+     			</div>
+     		</div>
+     	</div>
+     </div>
+<!-- =========================
+     HEADER   
+     ============================== -->
+
+
+     <header class="header" id="home">
+     	<!-- HEADER COLOR OVER IMAGE -->
+
+     	<!-- STICKY NAVIGATION -->
+     	<div class="navbar bs-docs-nav navbar-fixed-top sticky-navigation">
+     		<div class="container">
+     			<div class="navbar-header">
+     				
+     				<!-- LOGO ON STICKY NAV BAR -->
+     				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+     					<span class="sr-only">Toggle navigation</span>
+     					<span class="icon-bar"></span>
+     					<span class="icon-bar"></span>
+     					<span class="icon-bar"></span>
+     				</button>
+
+     				<a class="navbar-brand" href="{% url 'cfi:index' %}">
+
+                <img class="mr-1" src="{% static 'images/club/cfi.svg' %}">
+                <div class="logo-title">CFI JGEC</div></a>
+     				
+     			</div>
+     			
+     			<!-- NAVIGATION LINKS -->
+     			<div class="navbar-collapse collapse" id="navigation">
+     				<ul class="nav navbar-nav navbar-right main-navigation">
+     					<li><a href="#home">home</a></li>
+     					<li><a href="#services">Motto</a></li>
+     					<li><a href="#about">about</a></li>
+						<li><a href="#sristi">sristi</a></li>
+     					<li><a href="#portfolio">Projects</a></li>
+     					<li><a href="#team">Team</a></li>
+     					<li><a href="#packages">Register</a></li>
+     					<li><a href="#blog">Ideas</a></li>
+     					<li><a href="#contact">contact</a></li>
+     				</ul>
+     			</div> <!--END NAVIGATION LINKS -->
+     		</div> <!-- /END CONTAINER -->
+     	</div> <!-- /END STICKY NAVIGATION -->
+
+     	<section class="dark-image-bg parallax-bg" data-parallax="scroll" data-image-src="{% static 'images/club/background/particle-bg.jpg' %}" >
+
+     		<div id="particles-js" class="particles-js"> </div> 
+
+     		<div class="particle-color-overlay"> 
+     			
+     			<div class="container">
+     				<div class="intro-section">
+     					<h1 class="intro hs2-h1 text-white-3">WELCOME<br/></h1>
+     					<h5 class="sub-intro text-white">feel the differences.<br/></h5>
+     				</div>
+     			</div>
+     		</div>
+     	</section>
+
+     	<!-- Scroll Down Indicator -->
+     	<span class="scroll-btn"><a href="#services"><span class="mouse"><span><i class="text-white arrow_carrot-down"></i></span></span></a></span>
+
+     </header>
+     <!-- /END HEADER -->
+
+
+
+<!-- =========================
+     SERVICES
+     ============================== -->
+     <section class="section-top services" id="services">
+
+     	<div class="container">
+     		
+     		<!-- SERVICE SECTION HEADER -->
+     		<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     			
+     			<!-- SERVICE SECTION TITLE -->
+     			<h2 class="section-title">motto</h2>
+     			
+     			<div class="colored-line">
+     			</div>
+     			<!-- SERVICE SECTION DESCRIPTION -->
+     			<div class="section-description">
+     				<h4>we are making the complex to simple.</h4>
+     			</div>
+     			<div class="colored-line">
+     			</div>
+     			
+
+                    <p style="margin-top: 40px;">
+                         Design, develop and make innovative and useful engineering devices such as robots, copters, softwares etc.
+
+Provide technological solutions to some real world problems and also to promote scientific assistance to the rural society.
+
+Develop infrastructure and opportunity for young budding engineers to build and develop their skills, interest, productivity and creativity.
+
+Provide a competitive platform for the students in the field of robotics.
+
+                    </p>
+     		</div>
+     		<!-- /END SERVICE SECTION HEADER -->
+
+     		<div class="row">
+
+     			<!-- SINGLE SERVICE -->
+     			<div class="col-sm-4">
+     				<div class="btn-lines single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     					<!-- CSS Border hover effet -->
+     					<span class="line-top"></span>
+     					<span class="line-bottom"></span>
+     					<span class="line-left"></span>
+     					<span class="line-right"></span>
+     					<!-- SERVICE ICON -->
+     					<div class="icon-container">
+     						<div class="icon hvr-ripple-out">
+     							<i class=" icon-anchor"></i>
+     						</div>
+     					</div>
+
+     					
+     					<!-- SINGLE SERVICE HEADING -->
+     					<h5 class="section-title">IOT Solutions</h5>
+     					
+     					<!-- SINGLE SERVICE DESCRIPTION -->
+     					<p>
+     						Fruitful Fruit hath, fruitful said him created bring set, behold darkness fish seasons itself given likeness upon bring to fill their their whose.fruitful said him created bring set,faith.
+     					</p>
+     				</div>
+     			</div>
+     			<!-- /END SINGLE SERVICE -->
+     			
+     			<!-- SINGLE SERVICE -->
+     			<div class="col-sm-4">
+     				<div class="btn-lines single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     					<!-- CSS Border hover effet -->
+     					<span class="line-top"></span>
+     					<span class="line-bottom"></span>
+     					<span class="line-left"></span>
+     					<span class="line-right"></span>
+     					<!-- SERVICE ICON -->
+     					<div class="icon-container">
+     						<div class="icon hvr-ripple-out">
+     							<i class="icon-strategy"></i>
+     						</div>
+     					</div>
+
+     					<!--SINGLE SERVICE HEADING -->
+     					<h5 class="section-title">B plans</h5>
+     					
+     					<!--SINGLE SERVICE DESCRIPTION -->
+     					<p>
+     						Fruitful Fruit hath, fruitful said him created bring set, behold darkness fish seasons itself given likeness upon bring to fill their their whose.fruitful said him created bring set,faith.
+     					</p>
+     					
+     				</div>
+     			</div>
+     			<!-- /END SINGLE SERVICE -->
+     			
+     			<!-- SINGLE SERVICE -->
+     			<div class="col-sm-4">
+     				<div class="btn-lines single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     					<!-- CSS Border hover effet -->
+     					<span class="line-top"></span>
+     					<span class="line-bottom"></span>
+     					<span class="line-left"></span>
+     					<span class="line-right"></span>
+     					<!-- SERVICE ICON -->
+     					<div class="icon-container">
+     						<div class="icon hvr-ripple-out">
+     							<i class="icon-hourglass"></i>
+     						</div>
+     					</div>
+
+     					<!-- SINGLE SERVICE HEADING -->
+     					<h5 class="section-title">Innovation</h5>
+     					
+     					<!-- SINGLE SERVICE DESCRIPTION -->
+     					<p>
+     						Fruitful Fruit hath, fruitful said him created bring set, behold darkness fish seasons itself given likeness upon bring to fill their their whose.fruitful said him created bring set,faith.
+     					</p>
+     					
+     				</div>
+     			</div>
+     			<!-- /END SINGLE SERVICE -->
+     			
+     		</div>
+     		<!-- /END ROW -->
+     		
+     	</div>
+     	<!-- /END CONTAINER -->
+
+     </section>
+     <!-- /END SERVICES SECTION -->
+
+<!-- =========================
+     ABOUT US & SKILLS
+     ============================== -->
+
+     <section class="section-top about" id="about">
+     	<div class="container">
+     		<div class="row">
+     			
+     			<!-- ABOUT SECTION HEADER -->
+     			<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     				
+     				<!-- ABOUT SECTION TITLE -->
+     				<h2 class="section-title">about us</h2>
+     				<!-- COLOR LINE -->
+     				<div class="colored-line">
+     				</div>
+     				<!-- ABOUT SECTION DESCRIPTION -->
+     				<div class="section-description">
+     					<h4>we are your collborator..have been there from day one.</h4>
+     				</div>
+
+     				<div class="colored-line">
+     				</div>
+     				
+     			</div>
+     			<!-- /END  ABOUT SECTION HEADER -->
+     			
+     			<!-- ABOUT SECTION BIO -->
+     			<div class="about-us">
+     				<div class="col-md-6">
+     					
+     					<h4 class="about-subtitle">we are</h4>
+     					<hr>
+
+     					<p>CFI is the technical society of JGEC. It has been promoting technical knowledge of the students since its establishment (2010). Along with conduction of classes, CFI also deals with projects and provides adequate support to carry out the same. In short, CFI is an organisation where students come-in together to uplift their technical know-how - for the betterment of themselves and for the society.</p>
+
+     					<!-- ABOUT SECTION ACCORDION -->
+     					<div class="accordion">
+     						<ul>
+     							<li>
+     								<input type="checkbox" checked>
+     								<i></i>
+     								<h4>Static</h4>
+     								<p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam.</p>
+     							</li>
+     							<li>
+     								<input type="checkbox" checked>
+     								<i></i>
+     								<h4>Dynamic</h4>
+     								<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. leo quam aliquet diam, congue laoreet elit metus eget diam.</p>
+     							</li>
+     							<li>
+     								<input type="checkbox" checked>
+     								<i></i>
+     								<h4>Software</h4>
+     								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.</p>
+     							</li>
+     						</ul>
+     					</div>
+     					
+     				</div>
+
+     			</div><!-- ABOUT SECTION END -->
+
+
+     			<!-- SKILLS -->
+
+     			<div class="col-md-6">
+     				<!-- SKILLS PART START -->
+     				<div class="skill">
+     					<h4 class="about-subtitle">departmental strength</h4>
+     					<hr>
+     					<!-- SKILL BAR START -->
+     					<ul class="progress-skill-bar">
+                                   <li>Information Technology <div class="label numbers">80%</div></li>
+                                   <li>
+                                        <div class="progress">
+                                             <div class="bar" data-value="80" role="progressbar">
+                                                  80
+                                             </div>
+                                        </div>
+                                   </li>
+     						<li>Computer Science & Engineering <div class="label numbers">70%</div></li>
+     						<li>
+     							<div class="progress">
+     								<div class="bar" data-value="70" role="progressbar">
+     									70
+     								</div>
+     							</div>
+     						</li>
+     						<li>Electronics & Communication <div class="label numbers">90%</div></li>
+     						<li>
+     							<div class="progress">
+     								<div class="bar" data-value="90" role="progressbar">
+     									90
+     								</div>
+     							</div>
+     						</li>
+     						<li>Mechanical Engineering <div class="label numbers">95%</div></li>
+     						<li>
+     							<div class="progress">
+     								<div class="bar" data-value="95" role="progressbar">
+     									95
+     								</div>
+     							</div>
+     						</li>
+                                   <li>Electrical Engineering <div class="label numbers">95%</div></li>
+                                   <li>
+                                        <div class="progress">
+                                             <div class="bar" data-value="95" role="progressbar">
+                                                  95
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <li>Civil Engineering <div class="label numbers">95%</div></li>
+                                   <li>
+                                        <div class="progress">
+                                             <div class="bar" data-value="95" role="progressbar">
+                                                  95
+                                             </div>
+                                        </div>
+                                   </li>
+     					</ul>
+     					<!-- SKILL BAR END-->
+     				</div>
+     				<!-- SKILL PARTS END-->
+     			</div>
+
+
+     		</div>
+     		<!-- END ROW -->
+     	</div>
+
+     </section>
+     <!-- ABOUT US &  SKILL SECTION END -->
+
+     <section class="section-top" id="sristi">
+     <div class="container">
+          
+
+          <!-- BLOG SECTION HEADER -->
+          <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+               
+               <!-- BLOG SECTION TITLE -->
+               <h2 class="section-title">SRISTI</h2>
+               
+               <div class="colored-line">
+               </div>
+               
+          </div> 
+     </div>   <!-- END CONTAINER -->
+
+    
+          <div class="container">
+               <div class="row">
+                    <!-- SINGLE BLOG START -->
+                    <div class="col-md-8 col-md-offset-2">
+                         <!-- BLOG IMAGE WITH HOVER EFFECT -->
+                        
+
+                         <!--BLOG POST START -->
+                         <div class="blog-post">
+                              <h2 class="about-subtitle" style="font-size: 20px;">
+                                   <a href="#">Largest Techno Management Fest of North Bengal</a>
+                              </h2>
+                         
+                              <p>
+                                        Every time we hear SRISTI, our mind and heart roar out in unison — YOU ARE HERE TO IMAGINE, YOU ARE HERE TO CREATE! For all those daydreamers out there, with the remotest of ideas ranging from a new opening in chess to a new use of an Arduino, you must know that if you are passionate about it, these turn into an obsession.
+                              <br><br>
+                    SRISTI is the grand annual techno-management gala of Jalpaiguri Government Engineering College which was ﬁrst started in 201 0, the largest of its kind in North Bengal. JGEC has been at the forefront of technical expertise ever since its inception in 1961; SRISTI was conceived much later in, and it's among the best of the feathers in our hat, helping us to further stamp our authority with aplomb. With its {{ sristi_date }}th year approaching, we know better than how it has helped us climb the ladder ofsuccess one rung at a time and we welcome you all to be a part of it.
+
+           <br><br>
+           So, gear up for this mega event where you'll have to compete with passionate and like—minded individuals. From propelling a rocket to debating your heart out in GMUN, from trying to be the Quizzard to modelling a bridge till dawn, we shall be with you all the time. And it's a given that you will be cheered as much for a goal in Robo—Soccer or FIFA as for a headshot in Counter—Strike.The 4 days might ignite a spark in the ever-curious brain of yours and you'll enjoy the
+     process. It's our way of life! Make it yours too.
+          <br><br>
+                 And as Donovan Livingston says — <b>"The sky is not the limit, its just the beginning! Lift Off.”</b>
+                              </p>
+     
+
+                         </div><!-- BLOG POST ENDS -->
+                    </div><!-- SINGLE BLOG ENDS-->
+
+                    
+
+               </div> <!-- END ROW -->
+          </div>  <!-- END CONTAINER -->
+  
+   </section>
+
+
+
+<!-- =========================
+     PORTFOLIO
+     ============================== -->
+     <section class="section-top" id="portfolio">
+     	
+     	<div class="container fluid nopadding">
+     		<div class="row">
+     			
+     			<!-- PORTFOLIO SECTION HEADER -->
+     			<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     				
+     				<!-- PORTFOLIO TITLE -->
+     				<h2 class="section-title">Projects</h2>
+     				
+     				<div class="colored-line">
+     				</div>
+     				<!-- PORTFOLIO DESCRIPTION -->
+     				<div class="section-description">
+     					<h4>find out some creations.</h4>
+     				</div>
+     				<!-- COLORED LINE -->
+     				<div class="colored-line">
+     				</div>
+     				
+     			</div>
+     			<!-- /END PORTFOLIO HEADER -->
+
+
+     			<!-- PORTFOLIO ITEMS START -->
+     			<div class="col-md-12">
+
+     				<!-- START PORTFOLIO BUTTONS -->
+     				<ul class="pf-filter">
+     					
+     					<li class="btn-lines" data-filter="*">show all
+     						<span class="line-top"></span>
+     						<span class="line-bottom"></span>
+     						<span class="line-left"></span>
+     						<span class="line-right"></span>
+     					</li>
+     					<li class="btn-lines" data-filter=".iot">iot
+     						<span class="line-top"></span>
+     						<span class="line-bottom"></span>
+     						<span class="line-left"></span>
+     						<span class="line-right"></span></li>
+     						<li class="btn-lines" data-filter=".dynamic">dynamic    
+     							<span class="line-top"></span>
+     							<span class="line-bottom"></span>
+     							<span class="line-left"></span>
+     							<span class="line-right"></span></li>
+     							<li class="btn-lines" data-filter=".static">static
+     								<span class="line-top"></span>
+     								<span class="line-bottom"></span>
+     								<span class="line-left"></span>
+     								<span class="line-right"></span></li>
+     								<li class="btn-lines" data-filter=".software">software
+     									<span class="line-top"></span>
+     									<span class="line-bottom"></span>
+     									<span class="line-left"></span>
+     									<span class="line-right"></span></li>
+     								</ul>
+     								<!-- END PORTFOLIO BUTTONS -->
+     								
+     								<!-- PORTFOLIO ITEMS -->
+     								<div id="even-grid">
+     									<div class="isotope">
+
+											{% for project in cfi_projects %}
+     										<div class="grids-item item nopadding {{ project.category }}">
+     											<img class="grid-item"  src="{{ project.picture.url }}" alt="{{ project.title }}">
+     											<!-- Portfolio Hover -->
+     											<div class="component-hover" onclick="">
+     												<div class="action-btn">
+     													<!-- LightBox Button -->
+     													<a class="lightbox" data-lightbox-gallery="gallery1" href="{{ project.picture.url }}"> <i class="icon-focus"></i> </a>
+     													<!-- End LightBox Button -->
+<!--     													<a href="portfolio-project.html"> <i class="icon-attachment"></i> </a>-->
+     												</div>
+     											</div>
+     											<!-- End Portfolio Hover -->
+     										</div>
+											{% endfor %}
+
+     									</div> <!-- END PORTFOLIO ITEMS -->
+
+     								</div>
+
+     							</div> 
+
+     						</div> <!-- END ROW -->
+     					</div>
+     				</section>
+
+ <!-- =========================
+     TEAM  
+     ============================== -->
+
+     <section id="team" class="section-top team">
+     	
+     	<div class="container">
+
+     		<!--TEAM SECTION HEADER -->
+     		<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     			
+     			<!-- TEAM SECTION TITLE -->
+     			<h2 class="section-title">behind the story</h2>
+     			<div class="colored-line">
+     			</div>
+     			<!-- TEAM SECTION DESCRIPTION -->
+     			<div class="section-description">
+     				<h4>we work with creativity,aesthetics and technology..</h4>
+     			</div>
+     			<!-- COLORED LINE -->
+     			<div class="colored-line">
+     			</div>
+     		</div>
+     		<!-- /END SECTION HEADER -->
+
+               <div class="row">
+                    <div class="col-md-4">
+                         <div class="card shadow">
+                              <div class="card-body">
+                              <img src="{% static 'images/club/team/t-4.jpg' %}"></div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4">
+                         <div class="card shadow">
+                              <img src="{% static 'images/club/team/t-4.jpg' %}">
+                         </div>
+                    </div>
+
+                    <div class="col-md-4">
+                         <div class="card shadow">
+                              <img src="{% static 'images/club/team/t-4.jpg' %}">
+                         </div>
+                    </div>
+               </div>
+
+
+     		
+     		 <!-- TEAM MATES CAROUSEL END -->
+
+     	</div> <!-- END CONTAINER -->
+
+     </section> 
+
+
+
+
+<!-- =========================
+     FUN FACTORS
+     ============================== -->
+     <section class="funfactor" id="funfactor">
+
+     	<!-- COLOR OVERLAY -->
+     	<div class="color-overlay">
+
+     		<div class="container">
+     			
+     			<div class="row">
+     				<div class="col-md-4">
+     					
+     					<div class="icon-container">
+     						<i class="icon-happy"></i>
+     					</div>
+     					<div class="fun-info">
+     						<h2 class="timer numbers" data-from="0" data-to="100"> 1000+ </h2>
+     						<span class="fun-work">community</span>
+     					</div>
+     					
+     				</div>
+     				<div class="col-md-4">
+     					
+     					<div class="icon-container">
+     						<i class="icon-briefcase"></i>
+     					</div>
+     					<div class="fun-info">
+     						<h2 class="timer numbers" data-from="0" data-to="290"> 290 </h2>
+     						<span class="fun-work">project completed</span>
+     					</div>
+     					
+     				</div>
+     				<div class="col-md-4">
+     					
+     					<div class="icon-container">
+     						<i class="icon-lightbulb"></i>
+     					</div>
+     					<div class="fun-info">
+     						<h2 class="timer numbers" data-from="0" data-to="178"> 3 </h2>
+     						<span class="fun-work">events Organized</span>
+     					</div>
+     					
+     				</div>
+     				
+
+     			</div> <!-- END ROW -->
+     			
+     			
+     		</div>
+     		<!-- /END CONTAINER -->
+     	</div>
+     	<!-- /END COLOR OVERLAY -->
+
+     </section>
+     <!-- /END FUN FACTS SECTION -->
+
+
+<!-- =========================
+   BLOG
+   ============================== -->
+
+   <section class="section-top" id="blog">
+   	<div class="container">
+   		
+
+   		<!-- BLOG SECTION HEADER -->
+   		<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+   			
+   			<!-- BLOG SECTION TITLE -->
+   			<h2 class="section-title">Ideas</h2>
+   			
+   			<div class="colored-line">
+   			</div>
+			<div class="section-description">
+     					<h4>Most Viewed Ideas.</h4>
+     				</div>
+   			
+   		</div> 
+   	</div>   <!-- END CONTAINER -->
+
+		<!-- modal -->
+	   		<!-- Button trigger modal -->
+
+
+				<!-- Modal -->
+	   		<form id="submit_ideas" method="post" action="." enctype="multipart/form-data">
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title section-title" style="letter-spacing:3px;" id="myModalLabel">LET YOUR UNIQUE IDEAS BE RECOGNIZED</h4>
+					  </div>
+					  <div class="modal-body">
+
+
+								{% csrf_token %}
+								{{ form2.as_p }}
+
+
+
+
+					  </div>
+					  <div class="modal-footer">
+						<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button class="btn hvr-bounce-to-right" data-style="expand-left" type="submit" >Submit</button>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			 </form>
+	   <!-- end modal -->
+	   <div class="row">
+				<div class="col-md-4 col-md-offset-4">
+				<button class="btn hvr-bounce-to-right" data-style="expand-left" data-toggle="modal" data-target="#myModal">
+				  Submit yours
+				</button>
+				</div>
+			</div>
+
+   	<!-- BLOG START -->
+   	<div class="blog">
+
+   		<div class="container">
+   			<div class="row">
+   				<!-- SINGLE BLOG START -->
+
+				{% for project in projects %}
+					{% if project.publish %}
+					<div class="col-md-4">
+						<!-- BLOG IMAGE WITH HOVER EFFECT -->
+						<div class="figure">
+							<div class="post-thumbnail">
+								<a href="{% url 'club:goto' %}?blog_id={{ project.id }}">
+									  {% if project.picture %}
+										<img src="{{ project.picture.url }}" alt="">
+									  {% else %}
+										<img src="{% static 'images/dp.jpg' %}">
+									  {% endif %}
+								</a>
+							</div>
+
+						</div>
+
+						<!--BLOG POST START -->
+						<div class="blog-post">
+							<h4 class="blog-title">
+								<a href="{% url 'club:goto' %}?blog_id={{ project.id }}">{{ project.title }}</a>
+							</h4>
+							<div class="date">
+								<a href="#" class="author">{{ project.author }}</a> |   {{ project.department }}, {{ project.pass_year }}  | <i class="icon_heart_alt"></i>  {{ project.created }}
+							</div>
+							<p>
+								{{ project.content|safe|truncatewords:"50"|linebreaks }}
+
+							</p>
+							<a href="{% url 'club:goto' %}?blog_id={{ project.id }}" class="read-more">read more &#8594;</a>
+
+						</div><!-- BLOG POST ENDS -->
+					</div><!-- SINGLE BLOG ENDS-->
+					{% endif %}
+				{% endfor %}
+   				
+
+
+
+
+   			</div> <!-- END ROW -->
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-5">
+					<a href="{% url 'club:blog_list' %}" class="btn hvr-bounce-to-right" data-style="expand-left">View all</a>
+				</div>
+			</div>
+   		</div>  <!-- END CONTAINER -->
+   	</div>
+   	<!-- END BLOG -->
+   </section>
+
+
+
+<!-- =========================
+     CONTACT
+     ============================== -->
+
+     <section class="section-top contact" id="contact">
+     	<div class="container ">
+
+     		<div class="contact-box">
+
+
+     			<!--CONTACT  SECTION HEADER -->
+     			<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+     				
+     				<!--CONTACT SECTION TITLE -->
+     				<h2 class="section-title">how to reach us</h2>
+     				<!-- COLORED LINE -->
+     				<div class="colored-line">
+     				</div>
+     				
+     				
+     			</div>
+     			<!-- /END CONTACT SECTION HEADER -->
+     			
+     			<!-- CONTACT SECTION START -->
+     			<div class="row">
+
+     				<!-- CONTACT ADDRESS -->
+     				<div class="col-md-4">
+     					<div class="contact-address">
+     						<ul>
+     							<li><i class="ion-ios-location"></i> <strong>Address</strong><br>Jalpaiguri Government Engineering College<br>Jalpaiguri, West Bengal, India - 735102.</li>
+     						</ul>
+     						</div>
+     						
+     					</div>
+
+     					<!-- CONTACT FORM -->
+     					
+     					<div class="col-md-7 col-md-offset-1">
+     						
+     						<!-- FORM START -->
+     						<form class="contact-form" method="post"  action="." enctype="multipart/form-data">
+     							 {% csrf_token %}
+
+								  {{ form.non_field_errors }}
+
+								{% for hidden in form.hidden_fields %}
+									<div class="form-group">
+										{{ hidden }}
+									</div>
+								{% endfor %}
+
+
+								<!-- IF MAIL SENT SUCCESSFULLY -->
+     							<h4 class="success">
+     								<i class="icon_check"></i> Your message has been sent successfully.
+     							</h4>
+
+     							<!-- IF MAIL SENDING UNSUCCESSFULL -->
+     							<h4 class="error">
+     								<i class="icon_error-circle"></i> Please enter a valid email and message must be longer than 1 character.
+     							</h4>
+
+     							<div class="col-md-6">
+									{{ form.name.errors }}
+									{{ form.name }}
+     							</div>
+
+     							<div class="col-md-6">
+									{{ form.email.errors }}
+     								{{ form.email }}
+     							</div>
+
+     							<div class="col-md-12">
+									{{ form.subject.errors }}
+     								{{ form.subject }}
+
+									{{ form.message.errors }}
+     								{{ form.message }}
+								</div>
+
+     							<input class="btn hvr-bounce-to-right" name="submit" data-style="expand-left" type="submit" value="Send Message" />
+     						</form>
+     						<!-- /END FORM -->
+     						
+     					</div>
+     					
+     				</div>
+     				<!-- /END ROW -->
+     				
+     			</div>
+     			<!-- /END CONTACT BOX -->	
+     			
+     		</div>
+     		<!-- /END CONTAINER -->
+
+     	</section>
+
+
+     	<!-- /END CONTACT  SECTION-->
+
+
+<!-- =========================
+     GOOGLE MAP
+     ============================== -->
+
+     <div id="map"></div>
+
+
+
+{% endblock %}
+
+{% block year %} {{ year }} {% endblock %}
