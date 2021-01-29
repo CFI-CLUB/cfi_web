@@ -22,6 +22,8 @@
 
 ### This will create a virtual environment named **_env_** and activate it
 
+    > pip3 install -r requirements.txt  ( This will install all the dependencies from requirements.txt file )
+
     > py manage.py runserver ( Command to run the program )
 
 This will start the server in http://127.0.0.1:8000/
