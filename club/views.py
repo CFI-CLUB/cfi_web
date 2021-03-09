@@ -166,3 +166,10 @@ def handler404(request, exception, template_name="club/error404.html"):
     response = render_to_response("club/error404.html")
     response.status_code = 404
     return response
+
+
+def ourteam(request):
+    return render(request, 'club/ourteam.html')
+
+def ourevent(request):
+    return render(request, 'club/ourevent.html')
