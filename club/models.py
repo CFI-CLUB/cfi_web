@@ -96,9 +96,22 @@ class Contactus(models.Model):
         verbose_name_plural = 'Contact us Records'
 
 
+class CFITeam(models.Model):
+    """
+    Entity for CFI Team
+    """
+    name = models.CharField(max_length=100)
+    post = models.CharField(max_length=100)
+    picture = models.ImageField(upload_to='CFITeam_images')
+    facebook = models.TextField(max_length=1000,default="", blank=True, null=True)
+    linkedin = models.TextField(max_length=1000,default="", blank=True, null=True)
+    twitter = models.TextField(max_length=1000,default="", blank=True, null=True)
+    github = models.TextField(max_length=1000,default="", blank=True, null=True)
+    batch = models.IntegerField(default=0)
+    created = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.name
 
-
-
-
-
+    class Meta:
+        verbose_name_plural = 'Team'
