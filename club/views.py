@@ -1,9 +1,8 @@
 from django.shortcuts import render, render_to_response, reverse, redirect, get_object_or_404
-from club.models import Project, CFIProject
+from club.models import Project, CFIProject, CFITeam
 from club.forms import ProjectForm, ContactusForm
 from django.core.paginator import Paginator
 import datetime
-
 
 def index(request):
     """
@@ -168,8 +167,18 @@ def handler404(request, exception, template_name="club/error404.html"):
     return response
 
 
-def ourteam(request):
-    return render(request, 'club/ourteam.html')
+def ourteam(request, year):
+
+    now = datetime.datetime.now()
+
+    cfi_team = CFITeam.objects.all().filter(batch=year)
+    context_dict = {
+        'now': now,
+        'year': year,
+        'cfi_team': cfi_team
+    }
+    return render(request, 'club/ourteam.html', context=context_dict)
+
 
 def ourevent(request):
     return render(request, 'club/ourevent.html')
