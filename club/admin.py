@@ -1,5 +1,5 @@
 from django.contrib import admin
-from club.models import Project, Category, Contactus, CFIProject
+from club.models import Project, Category, Contactus, CFIProject, CFITeam
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'department', 'pass_year', 'publish',)
@@ -25,3 +25,4 @@ admin.site.register(Project, ProjectAdmin)
 admin.site.register(Category)
 admin.site.register(CFIProject, CFIProjectAdmin)
 admin.site.register(Contactus, ContactusAdmin)
+admin.site.register(CFITeam)
