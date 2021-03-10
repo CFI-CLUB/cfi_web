@@ -8,11 +8,9 @@ urlpatterns = [
     path('goto/', views.goto_url, name="goto"),
     path('ideas/', views.blog_list, name="blog_list"),
     path('<slug:title_slug>/', views.blog, name="blog"),
-    path('ourteam',views.ourteam,name='ourteam'),
-    path('ourevent',views.ourevent,name='ourevent'),
+    path('teams/<slug:year>/',views.ourteam,name='ourteam'),
+    path('events',views.ourevent,name='ourevent'),
 ]
 
 # depreciated code
 # path('submit-ideas/', views.submit_ideas, name="submit_ideas"),
-
-
