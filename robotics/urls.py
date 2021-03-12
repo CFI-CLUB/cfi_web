@@ -9,7 +9,7 @@ handler404 = 'club.views.handler404'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cfi/', include('cfi.urls')),
+    path('', include('cfi.urls')),
     path('club/', include('club.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
