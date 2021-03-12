@@ -145,8 +145,8 @@
 						<ul class="nav navbar-nav navbar-right main-navigation">
 							<li><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li> 
-														
-							<li class="dropdown">
+							<li><a href="{% url 'club:ourevent' %}">Events</a></li>						
+<!-- 							<li class="dropdown">
   
 								<a class="dropdown-toggle " type="button" data-toggle="dropdown">Events 
 								<span class="caret"></span></a>
@@ -154,9 +154,9 @@
 								<li><a href="/club/events/sristi">Sristi</a></li>
 								<li><a href="/club/events/icic">ICIC</a></li>
 								</ul> -->
-							</li>
-							<li><a href="/club/team">Team</a></li>
-							<li><a href="/club/achievements">Achievements</a></li>
+							</li> -->
+							<li><a href="{% url 'club:ourteam' %}">Team</a></li>
+<!-- 							<li><a href="/club/achievements">Achievements</a></li> -->
 							<li><a href="{% url 'club:index' %}#blog">Ideas</a></li>
 							<li><a href="/club/projects">Projects</a></li> 
 
