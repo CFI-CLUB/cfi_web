@@ -115,3 +115,11 @@ class CFITeam(models.Model):
 
     class Meta:
         verbose_name_plural = 'Team'
+
+
+#Events section
+class Events(models.Model):
+    eventname = models.CharField(max_length=100)
+    pic = models.ImageField(upload_to='CFIEvents')
+    about = models.CharField(max_length=512)
+    

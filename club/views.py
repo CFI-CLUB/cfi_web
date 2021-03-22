@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response, reverse, redirect, get_object_or_404
-from club.models import Project, CFIProject, CFITeam
+from club.models import Project, CFIProject, CFITeam, Events
 from club.forms import ProjectForm, ContactusForm
 from django.core.paginator import Paginator
 import datetime
@@ -181,4 +181,9 @@ def ourteam(request, year):
 
 
 def ourevent(request):
-    return render(request, 'club/ourevent.html')
+    event = Events.objects.all().first()
+    even = event.eventname
+    eve = Events.objects.all().exclude(eventname=even)
+    return render(request, 'club/ourevent.html',{
+        "Event":event,"Events":eve
+    })

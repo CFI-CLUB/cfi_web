@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+	
  {% load staticfiles %}
 <html lang="en">
 
@@ -112,7 +113,7 @@
 				}
 				}
 			
-		
+
 				</style>
 
 
@@ -120,6 +121,7 @@
 
 		<body id="style-4">
 
+			
 			<!-- STICKY NAVIGATION -->
 			<div class="navbar bs-docs-nav navbar-fixed-top sticky-navigation">
 				<div class="container">
@@ -143,9 +145,9 @@
 					<!-- NAVIGATION LINKS -->
 					<div class="navbar-collapse collapse" id="navigation">
 						<ul class="nav navbar-nav navbar-right main-navigation">
-							<li><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li> 
-							<li><a href="/club/ourevent.html">Events</a></li>						
+							<li><a href="{% url 'club:index' %}#home">Home</a></li>
+							<li><a href="{% url 'club:index' %}#about">About</a></li> 
+							<li><a href="{% url 'club:ourevent' %}">Events</a></li>						
 <!-- 							<li class="dropdown">
   
 								<a class="dropdown-toggle " type="button" data-toggle="dropdown">Events 
@@ -155,7 +157,7 @@
 								<li><a href="/club/events/icic">ICIC</a></li>
 								</ul> 
 							</li> -->
-							<li><a href="/club/ourteam.html">Team</a></li>
+							<li><a href="{% url 'club:ourteam' 2022 %}">Team</a></li>
 <!-- 							<li><a href="/club/achievements">Achievements</a></li> -->
 							<li><a href="{% url 'club:index' %}#blog">Ideas</a></li>
 							<li><a href="{% url 'club:index' %}#portfolio">Projects</a></li> 
@@ -177,8 +179,8 @@
      	<div class="row footer-content" style="margin-top: -60px; margin-bottom: -0px;">
      		<div class="col-md-4 footer-column"> 
 				<ul class="social-icons">
-					<li><a href="https://www.facebook.com/CFI.JGEC/"><i class="social_facebook"></i></a></li>
-					<li><a href="https://www.linkedin.com/company/centre-for-innovation-jgec"><i class="social_linkedin"></i></a></li>
+					<li><a target="_blank" href="https://www.facebook.com/CFI.JGEC/"><i class="social_facebook"></i></a></li>
+					<li><a target="_blank" href="https://www.linkedin.com/company/centre-for-innovation-jgec"><i class="social_linkedin"></i></a></li>
 				</ul>
 				
      			<h4 class="footer-title remove-in-mobile">Subscribe now!</h4>
@@ -204,15 +206,15 @@
      		</div>
      		<div class="col-md-4 footer-column"> 
 				<ul class="list-inline remove-in-mobile">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="/events">Events</a></li>
-					<li><a href="/team">Team</a></li>
+					<li><a href="{% url 'club:index' %}#home">Home</a></li>
+					<li><a href="{% url 'club:index' %}#about">About</a></li>
+					<li><a href="{% url 'club:ourevent' %}">Events</a></li>
+					<li><a href="{% url 'club:ourteam' 2022 %}">Team</a></li>
 					
-					<li><a href="/achievements">Achievements</a></li>
+					<!--<li><a href="/achievements">Achievements</a></li>-->
 					<!-- <li><a href="/alumni">Alumni</a></li> -->
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="#blog">Ideas</a></li> 
+					<li><a href="{% url 'club:index' %}#portfolio">Projects</a></li>
+					<li><a href="{% url 'club:index' %}#blog">Ideas</a></li> 
 				</ul>
 				<br class="remove-in-mobile"><br class="remove-in-mobile">
 				<!--/ End footer logo -->
