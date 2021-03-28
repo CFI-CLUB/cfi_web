@@ -8,7 +8,7 @@
 <!-- =========================
      PRE LOADER       
 ============================== -->
-<div class="preloader">
+<!-- <div class="preloader">
   <div id="ip-container" class="ip-container">
     <div class="ip-header">
         <div class="ip-loader">
@@ -19,7 +19,7 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
 
 <header class="header" id="blog">
 <!-- STICKY NAVIGATION -->
@@ -120,7 +120,7 @@
                           {% if blog.picture %}
                             <img src="{{ blog.picture.url }}" alt="">
                           {% else %}
-                            <img src="{% static 'images/dp.jpg' %}">
+                            <img src="{% static 'images/dp.jpg' %}"  width="280px">
                           {% endif %}
                       </a>
                   </div>
